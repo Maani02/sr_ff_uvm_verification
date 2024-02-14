@@ -4,7 +4,7 @@ module sr(s,r,q,qbar);
 	output reg q;
 	output reg qbar;
 
-	always@(*) begin 
+	always@(s,r) begin 
 		if(s==0 && r==0) begin 
 			q    <=  q;
 			qbar <= ~q;
